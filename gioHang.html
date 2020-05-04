@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hiển thị Sản Phẩm Giỏ Hàng</title>
+    <script src="sanPham.js"></script>
+    <script src="gio-hang.js"></script>
+    <script src="hoTro.js"></script>
+    <script src="https://kit.fontawesome.com/f20d460fd9.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        * {
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+        }
+
+        img {
+            width: 100%;
+        }
+
+        .gioHang {
+            border: 1px solid #ddd;
+            box-shadow: 2px 2px 4px #ddd;
+            margin: auto;
+            max-width: 1100px;
+            padding: 20px;
+            margin-top: 50px;
+        }
+
+        .itemGioHang {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .itemGioHang .hinhAnh img {
+            width: 50px;
+            height: 50px;
+        }
+
+
+        .itemGioHang .hinhAnh,
+        .soLuong,
+        .tongTien,
+        .hanhDong {
+            flex: 1;
+            margin-left: 20px;
+        }
+
+        .itemGioHang .gia {
+            flex: 2;
+        }
+
+        .itemGioHang .ten {
+            flex: 3;
+        }
+
+        .itemGioHang .gia .giaGoc {
+            font-size: 12px;
+            text-decoration: line-through;
+            color: black;
+        }
+
+        .itemGioHang .gia .giaBan {
+            color: red;
+        }
+
+        .itemGioHang .hanhDong i {
+            color: black;
+        }
+
+        .itemGioHang .hanhDong i:hover {
+            color: red;
+            zoom: 1.05;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="hearder-full">
+        <div class="hearder">
+            <div class="logo">
+                <a href="home.html"> <img
+                        src="https://ciaotravel.com.vn/wp-content/uploads/2015/08/logo_he_thong_24hstorevn_FULL_PNG1.png"
+                        alt="" srcset=""> </a>
+            </div>
+            <div class="seach">
+                <div class="timKiem">
+                    <input type="text" placeholder="Tìm Kiếm">
+                    <input type="button" value="Tìm">
+                </div>
+            </div>
+            <div class="hotLine">
+                Liên hệ: 19001717
+            </div>
+        </div>
+        <div class="menu">
+            <!-- menu -->
+            <nav id="nav-bar">
+                <ul class="menu-lv1">
+                    <li class="item-lv1">
+                        <a href="home.html" class="item-lv1-title">Trang Chủ</a>
+                    </li>
+                    <li class="item-lv1">
+                        <a href="#" class="item-lv1-title">Điện thoại</a>
+                        <ul class="menu-lv2">
+                            <li class="item-lv2">
+                                <a href="#" class="item-lv2-title">SamSung</a>
+                            </li>
+                            <li class="item-lv2">
+                                <a href="#" class="item-lv2-title">Iphone</a>
+                            </li>
+                            <li class="item-lv2">
+                                <a href="#" class="item-lv2-title">Xaomi</a>
+                            </li>
+                            <li class="item-lv2">
+                                <a href="#" class="item-lv2-title">Oppo</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="item-lv1">
+                        <a href="#" class="item-lv1-title">Laptop</a>
+                        <ul class="menu-lv2">
+                            <li class="item-lv2">
+                                <a href="#" class="item-lv2-title">Asus</a>
+                            </li>
+                            <li class="item-lv2">
+                                <a href="#" class="item-lv2-title">Dell</a>
+                            </li>
+                            <li class="item-lv2">
+                                <a href="#" class="item-lv2-title">Acer</a>
+                            </li>
+                            <li class="item-lv2">
+                                <a href="#" class="item-lv2-title">Hp</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="item-lv1">
+                        <a href="#" class="item-lv1-title">Phụ kiện</a>
+                    </li>
+                    <li class="item-lv1">
+                        <a href="#" class="item-lv1-title">Liên Hệ</a>
+                    </li>
+                    <li class="item-lv1">
+                        <a href="#" class="item-lv1-title">Giới thiệu</a>
+                    </li>
+                    <li class="item-lv1">
+                        <a href="them-san-pham.html" class="item-lv1-title">Thêm sản phẩm</a>
+                    </li>
+                    <li class="item-lv1">
+                        <a href='gioHang.html'><i class="fas fa-cart-plus"></i></a>
+
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <div class="gioHang" id="gioHang">
+
+    </div>
+
+    <footer>
+		<div class="footer">
+			<div class="ocuoi">
+				<div class="logo-cuoi">
+					<img src="https://ciaotravel.com.vn/wp-content/uploads/2015/08/logo_he_thong_24hstorevn_FULL_PNG1.png" alt="">
+				</div>
+				<div class="ttct">
+					<div class="lh">
+						Liên hệ với chúng tôi
+						<div class="lienhe">
+							<div class="mxh">
+								<a href="https://www.facebook.com">
+								<img src="images/iconfb.png"></a>
+							</div>
+							<div class="mxh">
+								<a href="https://www.twitter.com">
+								<img src="images/tw.png"></a>
+							</div>
+							<div class="mxh">
+								<a href="https://www.google.com">
+								<img src="images/gg.png"></a>
+							</div>
+							<div class="mxh">
+								<a href="https://www.instagram.com">
+								<img src="images/ig.png"></a>
+							</div>
+						</div>
+					</div>
+					<div class="tt">
+						<div class="ct">
+							
+							<li class="ff">TỔNG CÔNG TY CỔ PHẦN 24H STORE</li>
+							<li class="ff">ĐỊA CHỈ : 27 NGUYỄN TẤT THÀNH-TP.BMT-ĐĂK LĂK</li>
+							<li class="ff">ĐIỆN THOẠI: 0375243954</li>
+							<li class="ff">EMAIL: SONDTPK01429@FPT.EDU.VN</li>
+							<li class="ff">HTTP://24hstore.vn</li>
+								<br>
+							<li class="ff">Chịu trách nhiệm website : Đinh Thanh Sơn</li>
+							<li class="ff">Emaii: sondtpk01429@fpt.edu.vn</li>
+							
+
+
+						</div>
+						<div class="th">
+							<div class="ogt">
+								<div class="ht">
+									<li class="ff">THÔNG TIN CẦN BIẾT</li>
+									<li class="ff">Điều kiện và điều khoản</li>
+									<li class="ff">Quy chế hoạt động</li>
+									<li class="ff">Câu hỏi thường gặp</li>
+									<li class="ff">Chính sách đổi trả tour</li>
+
+								</div>
+								<div class="ht">
+									<li class="ff">ĐỐI TÁC LIÊN KẾT</li>
+									<li class="ff">Thegioididong.com</li>
+									<li class="ff">Fptshop.com</li>
+									<li class="ff">Vienthonga.com</li>
+								</div>
+							</div>
+							<div class="ogt">
+								<img src="https://gonline.vn/wp-content/uploads/2018/08/dathongbaobocongthuong-3.png" alt="" srcset="">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="thanhcuoi">
+				© 2014 Fertile - All Rights Reserved - Mail: sondtpk01429@fpt.edu.vn	
+		</div>
+	</footer>
+
+    <script>
+        hienThiGioHang();
+        function chuyenDoiDoiTuongItemGioHang(itemGioHang) {
+
+
+            var sanPham = laySanPhamTheoId(itemGioHang.idSanPham);
+            console.log(sanPham);
+            var tongTien = itemGioHang.soLuong * sanPham.tinhGiaSauKhiGiam();
+
+            var HTML = '   <div class="itemGioHang">  ' +
+                '               <div class="hinhAnh">  ' +
+                '                   <img src="' + sanPham.hinhAnh + '">  ' +
+                '               </div>  ' +
+                '               <p class="ten">' + sanPham.ten + '</p>  ' +
+                '               <div class="gia">  ' +
+                '                   <span class="giaGoc">' + sanPham.giaTruocKhiGiam + ' đ</span>  ' +
+                '                   <span class="giaBan">' + sanPham.tinhGiaSauKhiGiam() + 'đ</span>  ' +
+                '               </div>  ' +
+                '               <input type="number" class="soLuong" value="' + itemGioHang.soLuong + '">  ' +
+                '               <p class="tongTien">' + tongTien + 'đ</p>  ' +
+                '               <div class="hanhDong">  ' +
+                '                   <i onclick="onclickRemove(' + sanPham.id + ')" class="fas fa-trash"></i>  ' +
+                '               </div>  ' +
+                '          </div>  ';
+
+            return HTML;
+
+        }
+
+        
+
+
+        function chuyenDoiDanhSachItemGioHangThanhHTML(danhSachItemGioHang) {
+            var HTMLTong = '';
+            for (var i = 0; i < danhSachItemGioHang.length; i++) {
+                var HTML = chuyenDoiDoiTuongItemGioHang(danhSachItemGioHang[i]);
+                HTMLTong = HTMLTong + HTML;
+            }
+            return HTMLTong;
+        }
+
+        function hienThiGioHang() {
+            var danhSachItemGioHang = layGioHangTuLocalStorage();
+
+            var HTML = chuyenDoiDanhSachItemGioHangThanhHTML(danhSachItemGioHang);
+
+            var nodeGioHang = document.getElementById('gioHang');
+            nodeGioHang.innerHTML = HTML;
+        }
+
+
+       
+
+
+
+
+    </script>
+</body>
+
+</html>
