@@ -46,11 +46,11 @@ function luuGioHangXuongLocalStorage(danhSachItemGioHang) {
 
 
 taoDoiTuongItemGioHang.remove = function (idSanPham) {
-    var carts = layGioHangTuLocalStorage();
+    var item = layGioHangTuLocalStorage();
     var danhSachItemGioHang = new Array();
 
-    for(var i =0; i < carts.length; i++) {
-        var cart = carts[i]
+    for(var i =0; i < item.length; i++) {
+        var cart = item[i]
 
         if (cart.idSanPham != idSanPham) {
             danhSachItemGioHang.push(cart)
@@ -61,14 +61,13 @@ taoDoiTuongItemGioHang.remove = function (idSanPham) {
       
  }
 
- 
+ function xoaGioHang(idSanPham) {
+    alert('xóa khỏi giỏ hàng thành công!');
+    taoDoiTuongItemGioHang.remove(idSanPham);
+    hienThiGioHang();
+    
+}
 
-
-
-
-
- 
- 
 
 function chuyenDoiDoiTuongItemGioHang(itemGioHang) {
 
@@ -88,7 +87,7 @@ function chuyenDoiDoiTuongItemGioHang(itemGioHang) {
         '               <input type="number" class="soLuong" value="' + itemGioHang.soLuong + '">  ' +
         '               <p class="tongTien">' + tongTien + 'đ</p>  ' +
         '               <div class="hanhDong">  ' +
-        '                   <i onclick="removeFromCart(' + sanPham.id + ')" class="fas fa-trash"></i>  ' +
+        '                   <i onclick="xoaGioHang(' + sanPham.id + ')" class="fas fa-trash"></i>  ' +
         '               </div>  ' +
         '          </div>  ';
 

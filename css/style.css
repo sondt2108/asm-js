@@ -257,6 +257,16 @@ img {
     margin-top: 45px; 
 }
 
+.dienThoai {
+    width: 1200px;
+    height: 40px;
+    background-color: aliceblue;
+    margin: auto;
+    margin-top: 20px;
+    line-height: 40px;
+    padding-left: 10px;
+}
+
 
 /* sản phẩm */
 #hien-thi-san-pham {
@@ -273,6 +283,7 @@ img {
     display: inline-block;
     margin: 10px 20px;
     box-shadow: 5px 5px  aliceblue;
+    margin-bottom: 70px;
 }
 
 .ten-san-pham {
@@ -302,6 +313,9 @@ img {
     margin-left: 40px;
     margin-bottom: 10px;
     border-radius: 10px;
+    border: 0;
+    cursor: pointer;
+    
 }
 
 .gia-goc {
@@ -309,108 +323,64 @@ img {
     color: var(--primary-color);
 }
 
-
-.footer {
-	width: 100%;
-	height: 360px;
-	background-color: green ;
-	clear:both;
-	margin-top: 20px;
-}
-.ocuoi {
-	width: 1200px;
-	height: 360px;
-	margin: 0 auto;
-}
-.logo-cuoi {
-	width: 300px;
-	height: 360px;
-    float: left;
-    margin-top: 30px;
+.service {
+    width: 100%;
+    height: 80px;
+    background-color: lavender;
 }
 
-.logo-cuoi img{
-    width: 310px;
-    height: 180px;
-    margin-top: 50px;
-}
-.thanhcuoi {
-	width: 100%;
-	height: 50px;
-	background-color: rgb(243, 239, 239);
-}
-
-.ttc {
+.dichvu {
     width: 1200px;
-    height: 50px;
-    text-align: center;
+    height: 80px;
     margin: auto;
-    font-size: 14px;
-    line-height: 50px;
-    color: black;
-}
-.ttct {
-	width: 890px;
-	height: 360px;
-	float: right;
-	background-color: green;
-}
-.lh {
-	width: 570px;
-	height: 130px;
-	text-align: center;
-	padding-top: 20px;
-	color: white;
-    font-size: 16px;
-}
-.tt {
-	width: 890px;
-	height: 210px;
-}
-.lienhe {
-	width: 280px;
-	height: 70px;
-	margin-left: 150px ;
-}
-.mxh {
-	width: 70px;
-	height: 70px;
-	float: left;
-	background-color: #bbb; 
-}
-.ct {
-	width: 450px;
-	height: 210px;
-	float: left;
 
 }
-.th {
-	width: 410px;
-	height: 210px;
-	float: right;
-}
-.ogt {
-	width: 410px;
-	height: 100px;
-	float: right;
-	margin-top: 5px;
+.footer {
+	width: 1200px;
+	height: 500px;
+	clear:both;
+    margin: auto;
 }
 
-.ogt img {
+
+.cs {
     width: 300px;
-    height: 100px;
+    height: 80px;
+    float: left;
 }
-.ht {
-	width: 190px;
-	height: 90px;
-	margin-left: 5px;
-	float: left;
+
+.cs p {
+    color: green;
+    padding-top: 10px;
+    text-align: center;
 }
-.ht, .ct, .ff li {
-	padding-top: 10px;
-	list-style: none;
-	font-size: 14px;
-	color: white;
-	padding-left: 10px;
-	line-height: 19px;
+
+.cs i {
+    color: green;
+    font-size: 30px;
 }
+
+.ttct {
+    width: 300px;
+    height: 420px;
+    float: left;
+    
+}
+
+.ttct p {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+.ttct img {
+    padding-top: 40px;
+}
+
+ .ttct i {
+    color: green;
+    font-size: 20px;
+}
+
