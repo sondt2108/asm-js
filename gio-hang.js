@@ -30,12 +30,9 @@ function layGioHangTuLocalStorage() {
     /* chuyển json thành danh sách item giỏ hàng */
     if(jsonDanhSachItemGioHang != null)
         danhSachItemGioHang = JSON.parse(jsonDanhSachItemGioHang);
-
-
        
     return danhSachItemGioHang;
 
-    
 }
 
 
@@ -48,8 +45,53 @@ function luuGioHangXuongLocalStorage(danhSachItemGioHang) {
 }
 
 
- function onclickRemove(idSanPham) {
-     
-     
+taoDoiTuongItemGioHang.remove = function (idSanPham) {
+    var carts = layGioHangTuLocalStorage();
+    var danhSachItemGioHang = new Array();
+
+    for(var i =0; i < carts.length; i++) {
+        var cart = carts[i]
+
+        if (cart.idSanPham != idSanPham) {
+            danhSachItemGioHang.push(cart)
+        }
+    }
+    luuGioHangXuongLocalStorage(danhSachItemGioHang);
+        return danhSachItemGioHang;
+      
  }
+
  
+
+
+
+
+
+ 
+ 
+
+function chuyenDoiDoiTuongItemGioHang(itemGioHang) {
+
+
+    var sanPham = laySanPhamTheoId(itemGioHang.idSanPham);
+    var tongTien = itemGioHang.soLuong * sanPham.tinhGiaSauKhiGiam();
+
+    var HTML = '   <div class="itemGioHang">  ' +
+        '               <div class="hinhAnh">  ' +
+        '                   <img src="' + sanPham.hinhAnh + '">  ' +
+        '               </div>  ' +
+        '               <p class="ten">' + sanPham.ten + '</p>  ' +
+        '               <div class="gia">  ' +
+        '                   <span class="giaGoc">' + sanPham.giaTruocKhiGiam + ' đ</span>  ' +
+        '                   <span class="giaBan">' + sanPham.tinhGiaSauKhiGiam() + 'đ</span>  ' +
+        '               </div>  ' +
+        '               <input type="number" class="soLuong" value="' + itemGioHang.soLuong + '">  ' +
+        '               <p class="tongTien">' + tongTien + 'đ</p>  ' +
+        '               <div class="hanhDong">  ' +
+        '                   <i onclick="removeFromCart(' + sanPham.id + ')" class="fas fa-trash"></i>  ' +
+        '               </div>  ' +
+        '          </div>  ';
+
+    return HTML;
+
+}

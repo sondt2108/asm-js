@@ -1,7 +1,11 @@
+* {box-sizing: border-box;}
+body {font-family: Arial, Helvetica, sans-serif}
+.mySlides {display: none;}
+img {vertical-align: middle;}
+
 
 #hearder-full {
     width: 100%;
-    height: 150px;
 }
 
 .hearder {
@@ -23,7 +27,7 @@
 .hotLine {
     width: 200px;
     height: 50px;
-    background-color: red;
+    background-color: green;
     float: right;
     margin-right: 50px; 
     margin-top: 30px;
@@ -38,7 +42,7 @@
 	margin-top: 30px;
 	background-color: #fff;
     border-radius: 100px;
-    border: 1px solid red;
+    border: 1px solid green;
 }
 .timKiem input:first-child {
 	width: 320px;
@@ -66,7 +70,7 @@
     max-width: 100%;
     height: 50px;
     margin: auto;
-    background-color: aqua;
+    z-index: 1;
 }
 
 ul {
@@ -106,7 +110,7 @@ img {
 }
 
 #nav-bar {
-    background-color: var(--primary-color);
+    background-color: green;
 }
 
 .menu-lv1 {
@@ -144,6 +148,7 @@ img {
     background-color: whitesmoke;
     position: absolute;
     display: none;
+    z-index: 1;
 }
 
 .menu-lv2 a {
@@ -161,30 +166,96 @@ img {
 
 .slider {
     width: 100%;
-    height: 300px;
+    height: 350px;
     margin-top: 20px;
 }
+
 .anh {
     width: 1200px;
-    height: 300px;
+    height: 350px;
     margin: auto;
 }
 .anh img {
-    width: 1200px;
-    height: 300px;
+    width: 800px;
+    height: 350px;
 }
+
+.sliderShow {
+    width: 800px;
+    height: 350px;
+    float: left;
+    background-color: aquamarine;
+    position: relative;
+}
+
+.mySlides {
+    display: none;
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+  
+
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  
+  .prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+  }
+  
+  .dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+  
+  
+ 
+
+.tcn {
+    width: 390px;
+    height: 350px;
+    float: right;
+}
+
+.spm {
+    width: 390px;
+    height: 110px;
+    margin-top: 5px;
+}
+
+.spm img {
+    width: 390px;
+    height: 110px;
+}
+
 
 .bc {
     width: 1200px;
-    height: 30px;
+    height: 75px;
     margin: auto;
-    margin-top: 20px; 
+    margin-top: 45px; 
 }
-
-
-
-
-
 
 
 /* sản phẩm */
@@ -195,8 +266,8 @@ img {
 }
 
 .san-pham {
-    width: 14%;
-    border: 1px solid #033;
+    width: 18%;
+    border: 1px solid wheat;
     padding: 20px;
     border-radius: 5px;
     display: inline-block;
@@ -226,11 +297,11 @@ img {
 .button {
     width: 100px;
     height: 25px;
-    background-color: red;
+    background-color:green;
     color: white;
     margin-left: 40px;
     margin-bottom: 10px;
-    border-radius: 0%;
+    border-radius: 10px;
 }
 
 .gia-goc {
@@ -242,7 +313,7 @@ img {
 .footer {
 	width: 100%;
 	height: 360px;
-	background-color: var(--primary-color) ;
+	background-color: green ;
 	clear:both;
 	margin-top: 20px;
 }
@@ -266,26 +337,31 @@ img {
 .thanhcuoi {
 	width: 100%;
 	height: 50px;
-	background-color: red;
-	text-align: center;
-	color: white;
-	font-size: 14px;
-	line-height: 50px;
+	background-color: rgb(243, 239, 239);
+}
+
+.ttc {
+    width: 1200px;
+    height: 50px;
+    text-align: center;
+    margin: auto;
+    font-size: 14px;
+    line-height: 50px;
+    color: black;
 }
 .ttct {
 	width: 890px;
 	height: 360px;
 	float: right;
-	background-color: var(--primary-color);
+	background-color: green;
 }
 .lh {
-	width: 890px;
+	width: 570px;
 	height: 130px;
 	text-align: center;
 	padding-top: 20px;
 	color: white;
-	font-size: 16px;
-
+    font-size: 16px;
 }
 .tt {
 	width: 890px;
@@ -294,7 +370,7 @@ img {
 .lienhe {
 	width: 280px;
 	height: 70px;
-	margin: 30px auto;
+	margin-left: 150px ;
 }
 .mxh {
 	width: 70px;
