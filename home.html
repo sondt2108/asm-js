@@ -5,10 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>hiển thị sản phẩm</title>
-    <script src="hoTro.js"></script>
-    <script src="sanPham.js"></script>
+    <script src="js/hoTro.js"></script>
+    <script src="js/sanPham.js"></script>
     <script src="them-san-pham.html"></script>
-    <script src="gio-hang.js"></script>
+    <script src="js/gio-hang.js"></script>
     <link rel="stylesheet" href="css/style.css">
     <script src="https://kit.fontawesome.com/f20d460fd9.js" crossorigin="anonymous"></script>
 
@@ -283,10 +283,6 @@
                 var itemGioHang = taoDoiTuongItemGioHang(idSanPham, 1);
                 danhSachItemGioHang.push(itemGioHang);
             }
-
-            /*var danhSachItemGioHangSauKhiDuocThem = themVaoGioHang(idSanPham, danhSachItemGioHang);
-            console.log('danh sách item giỏ hàng sau khi thêm:');
-            console.log(danhSachItemGioHangSauKhiDuocThem);*/
 
             luuGioHangXuongLocalStorage(danhSachItemGioHang);
 
