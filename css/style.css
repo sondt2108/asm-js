@@ -281,13 +281,17 @@ img {
 
 .san-pham {
     width: 18%;
-    border: 1px solid wheat;
+    border: 2px solid whitesmoke;
     padding: 20px;
     border-radius: 5px;
     display: inline-block;
     margin: 10px 20px;
-    box-shadow: 5px 5px  aliceblue;
     margin-bottom: 70px;
+}
+
+
+.hien-thi-hinh-anh:hover {
+    transform: scale(1.2);
 }
 
 .ten-san-pham {
@@ -320,6 +324,11 @@ img {
     border: 0;
     cursor: pointer;
     
+}
+
+.button:hover {
+    background-color: aquamarine;
+    color: white;
 }
 
 .gia-goc {
