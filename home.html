@@ -17,6 +17,9 @@
 </head>
 
 <body>
+    <section id="thongBao">
+
+    </section>
     <div id="hearder-full">
         <div class="hearder">
             <div class="logo">
@@ -131,9 +134,9 @@
         </div>
         <br>
         <div style="text-align:center">
-            <span class="dot" onclick="currentSlide(1)"></span>
-            <span class="dot" onclick="currentSlide(2)"></span>
-            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dauCham" onclick="currentSlide(1)"></span>
+            <span class="dauCham" onclick="currentSlide(2)"></span>
+            <span class="dauCham" onclick="currentSlide(3)"></span>
         </div>
     </div>
     <!-- nội dung chính -->
@@ -208,6 +211,11 @@
                 <p><i class="fas fa-map-marker-alt"> </i> 1114 3 Tháng 2, P.12, Q11, TPHCM</p>
             </div>
         </div>
+        <div class="cuoi">
+            <div class="thanhCuoi">
+                © 2020 Designed by Thanh Sơn
+            </div>
+        </div>
     </footer>
     <script>
         /* b1 định nghĩa đối tượng & xây dựng hàm tạo nhanh cho đối tượng */
@@ -262,7 +270,7 @@
         }
 
         function onclickDuaVaoGioHang(idSanPham, soLuong) {
-            alert('Thêm vào giỏ hàng thành công');
+
 
 
             var danhSachItemGioHang = layGioHangTuLocalStorage();
@@ -285,7 +293,8 @@
             }
 
             luuGioHangXuongLocalStorage(danhSachItemGioHang);
-
+            var nodeThongBao = document.getElementById('thongBao');
+            MessageService().show(nodeThongBao, 'Thêm vào giỏ hàng thành công');
 
         }
 
@@ -295,7 +304,7 @@
         function showSlides() {
             var i;
             var slides = document.getElementsByClassName("mySlides");
-            var dots = document.getElementsByClassName("dot");
+            var dots = document.getElementsByClassName("dauCham");
 
             for (i = 0; i < slides.length; i++) {
                 slides[i].style.display = "none";

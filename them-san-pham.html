@@ -5,65 +5,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Thêm mới sản phẩm</title>
-    <script src="hoTro.js"></script>
-    <script src="sanPham.js"></script>
+    <script src="js/hoTro.js"></script>
+    <script src="js/sanPham.js"></script>
+    <script src="js/gio-hang.js"></script>
+    <script src="https://kit.fontawesome.com/f20d460fd9.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/themSanPham.css">
     <style>
-        * {
-            box-sizing: border-box;
-        }
-
-        .them-san-pham {
-            width: 30%;
-            border: 1px solid #444;
-            margin: 0 auto;
-            padding: 30px;
-            margin-top: 50px;
-            box-shadow: 2px 2px 5px #ddd;
-            margin-bottom: 70px;
-        }
-
-        .them-san-pham label {
-            display: block;
-            width: 100%;
-            font-size: 10px;
-            line-height: 20px;
-            margin-top: 20px;
-            border-radius: 5px;
-        }
-
-        .them-san-pham input {
-            display: block;
-            width: 100%;
-            padding: 10px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            margin-top: 5px;
-        }
-
-        .them-san-pham .btn {
-            width: 100%;
-            margin-top: 20px;
-            padding: 10px 20px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            background-color: orange;
-            color: #fff;
-
-        }
-
-        .them-san-pham .error {
-            font-size: 12px;
-            color: red;
-            font-style: normal;
-            margin-top: 5px;
-            line-height: 12px;
-            height: 12px;
-        }
+        
     </style>
 </head>
 
 <body>
+    <section id="thongBao">
+
+    </section>
     <div id="hearder-full">
         <div class="hearder">
             <div class="logo">
@@ -230,7 +186,8 @@
     <script>
         function onclickTaoSanPham() {
             if (kiemTraFromDangKi() == true) {
-                alert("thêm sản phẩm thành công")
+                var nodeThongBao = document.getElementById('thongBao');
+                MessageService().show(nodeThongBao, 'Tạo thêm sản phẩm thành công');
                 console.log('thực hiện đăng nhập');
 
                 var sanPham = taoDoiTuongInput();
@@ -264,7 +221,7 @@
 
             var nodeGiaGoc = document.getElementById('giaGoc');
             var giaGoc = nodeGiaGoc.value;
-            
+
             var nodePhanTramGiamGia = document.getElementById('phanTramGiamGia');
             var phanTramGiamGia = nodePhanTramGiamGia.value;
 

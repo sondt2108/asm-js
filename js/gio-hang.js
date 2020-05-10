@@ -62,9 +62,11 @@ taoDoiTuongItemGioHang.remove = function (idSanPham) {
  }
 
  function xoaGioHang(idSanPham) {
-    alert('xóa khỏi giỏ hàng thành công!');
+    //alert('xóa khỏi giỏ hàng thành công!');
     taoDoiTuongItemGioHang.remove(idSanPham);
     hienThiGioHang();
+    var nodeThongBao = document.getElementById('thongBao');
+    MessageService().show(nodeThongBao, 'Xóa khỏi giỏ hàng thành công');
     
 }
 
@@ -93,4 +95,17 @@ function chuyenDoiDoiTuongItemGioHang(itemGioHang) {
 
     return HTML;
 
+}
+
+
+function MessageService() {
+    var messageService = new Object();
+    messageService.show = function (node = document.getElementById(), message) {
+        node.style.display = 'block';
+        node.innerHTML = message;
+        setTimeout(() => {
+            node.style.display = 'none';
+        }, 2000);
+    }
+    return messageService;
 }
