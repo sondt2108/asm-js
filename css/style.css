@@ -245,6 +245,7 @@ img {
     width: 390px;
     height: 110px;
     margin-top: 5px;
+    border: 1px solid whitesmoke;
 }
 
 .spm img {
@@ -252,6 +253,25 @@ img {
     height: 110px;
 }
 
+
+
+.imagesNew img{
+    width: 95px;
+    height: 90px;
+    float: left;
+    padding: 10px;
+}
+
+.new  {
+    width: 290px;
+    height: 90px;
+    float: right;
+}
+
+.new:hover {
+    color: #1c98f7;
+    cursor: pointer;
+}
 
 .bc {
     width: 1200px;
