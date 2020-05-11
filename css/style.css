@@ -304,7 +304,7 @@ img {
     font-size: 12px;
     text-decoration: line-through;
     color: black;
-    padding-left: 10px;
+    padding-left: 5px;
 }
 
 .khu-vuc-san-pham {
@@ -334,6 +334,7 @@ img {
 .gia-goc {
     padding-left: 10px;
     color: var(--primary-color);
+    font-size: 14px;
 }
 
 .service {
