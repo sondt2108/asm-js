@@ -156,12 +156,13 @@ img {
 }
 
 .menu-lv2 .item-lv2 {
-    padding: 10px 20px;
+    padding: 10px;
 }
 
 .menu-lv2 .item-lv2:hover {
     background-color: palevioletred;
     border-bottom: 1px solid red;
+    
 }
 
 .slider {
